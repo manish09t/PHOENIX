@@ -70,7 +70,6 @@ flowchart LR
     end
 
     Remote <-- "ESP-NOW (bidirectional)\ndrive commands / telemetry" --> Car
-    Car -- "UART\nsensor data" --> Cam
     Cam -- "WiFi Hotspot\nMJPEG stream + WebSocket control" --> Phone["📱 Operator's Phone / Laptop Browser"]
 ```
 
