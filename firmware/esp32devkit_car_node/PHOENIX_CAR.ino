@@ -1,23 +1,5 @@
 /*
-  PHOENIX - ESP32 DevKit Car Controller - FINAL v2
-  
-  FIXES in this version:
-  1. PWM frequency changed from 20000Hz to 1000Hz
-     20kHz was causing L298N to not respond to reverse direction
-     L298N datasheet max switching frequency = ~40kHz but 
-     in practice 1kHz is most reliable for direction changes
-     
-  2. Struct uses __attribute__((packed)) to prevent padding issues
-     between ESP32-C3 (remote) and ESP32 DevKit (car)
-
-  3. Direction change now stops motors for 10ms before reversing
-     This prevents L298N shoot-through current when switching direction
-
-  WIRING:
-    Right motors: OUT1/OUT2 → IN1=G18, IN2=G19, ENA=G14
-    Left  motors: OUT3/OUT4 → IN3=G25, IN4=G26, ENB=G13
-    TRIG=G27, ECHO=G33, DHT22=G4, MQ5=G34, LED=G2
-    Serial2: RX=G16, TX=G17
+  PHOENIX - ESP32 DevKit Car Controller 
 */
 
 #include <esp_now.h>
