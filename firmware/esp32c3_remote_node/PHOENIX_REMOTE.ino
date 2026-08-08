@@ -1,7 +1,7 @@
 /*
-  PHOENIX - ESP32-C3 SuperMini Remote - AXIS CORRECTED
+  PHOENIX - ESP32-C3 SuperMini Remote
 
-  YOUR JOYSTICK (own diagram):
+  My JOYSTICK (own diagram):
     VRX (G1) = FORWARD/BACKWARD axis  → UP=4095, DOWN=0
     VRY (G2) = LEFT/RIGHT turn axis   → RIGHT=4095, LEFT=0
     Center: VRX=2847, VRY=2828
