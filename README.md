@@ -180,7 +180,6 @@ address **before** they can pair:
 | DHT22 data | G4 |
 | MQ-5 analog out | G34 |
 | Status LED | G2 |
-| UART to camera node — RX / TX | G16 / G17 |
 
 ### Handheld Remote (ESP32-C3)
 
@@ -203,7 +202,6 @@ address **before** they can pair:
 | Flash LED | GPIO 4 |
 | Pan servo | GPIO 2 |
 | Tilt servo | GPIO 14 |
-| UART from car node — RX / TX | GPIO 13 / GPIO 12 |
 
 Camera data pins follow the standard AI-Thinker ESP32-CAM pinout (see top of
 [`PHOENIX_CAM.ino`](firmware/esp32cam_node/PHOENIX_CAM.ino)).
