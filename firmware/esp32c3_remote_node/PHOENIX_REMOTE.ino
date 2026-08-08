@@ -1,15 +1,10 @@
 /*
   PHOENIX - ESP32-C3 SuperMini Remote - AXIS CORRECTED
 
-  YOUR JOYSTICK (from your diagram):
+  YOUR JOYSTICK (own diagram):
     VRX (G1) = FORWARD/BACKWARD axis  → UP=4095, DOWN=0
     VRY (G2) = LEFT/RIGHT turn axis   → RIGHT=4095, LEFT=0
     Center: VRX=2847, VRY=2828
-
-  THE FIX (only change from previous version):
-    speed ← VRX  (was VRY — WRONG)
-    turn  ← VRY  (was VRX — WRONG)
-    No inversion needed for either axis.
 */
 
 #include <esp_now.h>
@@ -60,7 +55,7 @@ RemoteCommand cmd = {0, 0, false, false};
 CarData       car = {};
 
 // ===== JOYSTICK CALIBRATION =====
-// Hardcoded from your diagram — auto-calibration overwrites at boot
+// Hardcoded from current joystick diagram — auto-calibration overwrites at boot
 int centerX = 2847;  // VRX center (forward/back axis)
 int centerY = 2828;  // VRY center (turn axis)
 const int   DEADZONE  = 200;
